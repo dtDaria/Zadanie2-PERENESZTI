@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="js/vue.js"></script>
+    <script defer src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Заметки</title>
+</head>
+<body>
+<div id="app">
+    <a href="#openModal">Сделать заметки</a>
+    <div id="openModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Заметка</h3>
+                    <li><a href="#close" title="Close" class="close">×</a></li>
+                </div>
+                <div class="bl">
+                </div>
+                <div class="modal-body">
+                    <form class="review-form" @submit.prevent="onSubmit">
+                        <p>
+                            <label for="name">Название:</label>
+                            <input  name="name" id="name" v-model="name" placeholder="name" value="Название">
+                        </p>
+                        <label for="review">Заметка:</label>
+                        <textarea  id="review"  v-model="review" value="Заметка"></textarea>
+                        </p>
+                        <p>
+                            <input  type="submit" value="Сохранить">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="product-info">
+            <div>
+                <h2>Чем хочешь поделиться?</h2>
+                <ul>
+                    <li v-for="pop in popis1">
+                        <p>Название: {{ pop.name }}</p>
+                        <p>Заметка: {{ pop.review }}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="bll">
+        <div class="product-info">
+            <div>
+                <ul>
+                    <li v-for="pop in popis2">
+                        <p>Название: {{ pop.name }}</p>
+                        <p>Заметка: {{ pop.review }}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="bl">
+        <div class="product-info">
+            <div>
+                <ul>
+                    <li v-for="pop in popis3">
+                        <p>Название: {{ pop.name }}</p>
+                        <p>Заметка: {{ pop.review }}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div >
+</body>
+</html>
