@@ -11,57 +11,47 @@
 </head>
 <body>
 <div id="app">
-    <a href="#openModal">Сделать заметки</a>
-    <div id="openModal" class="modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Заметка</h3>
-                    <li><a href="#close" title="Close" class="close">×</a></li>
-                </div>
-                <div class="bl">
-                </div>
-                <div class="modal-body">
-                    <form class="review-form" @submit.prevent="onSubmit">
-                        <p>
-                            <label for="name">Название:</label>
-                            <input  name="name" id="name" v-model="name" placeholder="name" value="Название">
-                        </p>
-                        <p>
-                        <label for="review">Заметка:</label>
-                        <textarea  id="review"  v-model="review" value="Заметка"></textarea>
-                        </p>
-                        <p>
-                            <label for="review">Заметка:</label>
-                            <textarea  id="review1"  v-model="review1" value="Заметка1"></textarea>
-                        </p>
-                        <p>
-                            <label for="review">Заметка:</label>
-                            <textarea  id="review2"  v-model="review2" value="Заметка2"></textarea>
-                        </p>
-                        <p>
-                            <input  type="submit" value="Сохранить">
-                        </p>
-                    </form>
+    <div class="form">
+        <form class="review-form" @submit.prevent="onSubmit">
+            <p>
+                <label for="name">Название:</label>
+                <input  name="name" id="name" v-model="name" placeholder="name" value="Название">
+            </p>
+            <p>
+                <label for="review">Заметка:</label>
+                <textarea  id="review"  v-model="review" value="Заметка"></textarea>
+            </p>
+            <p>
+                <label for="review">Заметка:</label>
+                <textarea  id="review1"  v-model="review1" value="Заметка1"></textarea>
+            </p>
+            <p>
+                <label for="review">Заметка:</label>
+                <textarea  id="review2"  v-model="review2" value="Заметка2"></textarea>
+            </p>
+            <p>
+                <input  type="submit" value="Сохранить">
+            </p>
+        </form>
+    </div>
+    <div class="b">
+        <div class="product">
+            <div class="product-info">
+                <div>
+                    <h2>Чем хочешь поделиться?</h2>
+                    <ul>
+                        <li v-for="pop in popis1">
+                            <p>Название: {{ pop.name }}</p>
+                            <p>Заметка: {{ pop.review }}</p>
+                            <p>Заметка: {{ pop.review1 }}</p>
+                            <p>Заметка: {{ pop.review2 }}</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="product">
-        <div class="product-info">
-            <div>
-                <h2>Чем хочешь поделиться?</h2>
-                <ul>
-                    <li v-for="pop in popis1">
-                        <p>Название: {{ pop.name }}</p>
-                        <p>Заметка: {{ pop.review }}</p>
-                        <p>Заметка: {{ pop.review1 }}</p>
-                        <p>Заметка: {{ pop.review2 }}</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+
     <div class="bll">
         <div class="product-info">
             <div>
@@ -76,6 +66,7 @@
             </div>
         </div>
     </div>
+
     <div class="bl">
         <div class="product-info">
             <div>
@@ -90,6 +81,7 @@
             </div>
         </div>
     </div>
+
 </div >
 </body>
 </html>
