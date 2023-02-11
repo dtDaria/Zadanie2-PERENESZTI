@@ -27,8 +27,17 @@
                             <label for="name">Название:</label>
                             <input  name="name" id="name" v-model="name" placeholder="name" value="Название">
                         </p>
+                        <p>
                         <label for="review">Заметка:</label>
                         <textarea  id="review"  v-model="review" value="Заметка"></textarea>
+                        </p>
+                        <p>
+                            <label for="review">Заметка:</label>
+                            <textarea  id="review1"  v-model="review1" value="Заметка1"></textarea>
+                        </p>
+                        <p>
+                            <label for="review">Заметка:</label>
+                            <textarea  id="review2"  v-model="review2" value="Заметка2"></textarea>
                         </p>
                         <p>
                             <input  type="submit" value="Сохранить">
@@ -38,7 +47,6 @@
             </div>
         </div>
     </div>
-
     <div class="product">
         <div class="product-info">
             <div>
@@ -47,38 +55,41 @@
                     <li v-for="pop in popis1">
                         <p>Название: {{ pop.name }}</p>
                         <p>Заметка: {{ pop.review }}</p>
+                        <p>Заметка: {{ pop.review1 }}</p>
+                        <p>Заметка: {{ pop.review2 }}</p>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <div id="bll">
+    <div class="bll">
         <div class="product-info">
             <div>
                 <ul>
                     <li v-for="pop in popis2">
                         <p>Название: {{ pop.name }}</p>
                         <p>Заметка: {{ pop.review }}</p>
+                        <p>Заметка: {{ pop.review1 }}</p>
+                        <p>Заметка: {{ pop.review2 }}</p>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <div id="bl">
+    <div class="bl">
         <div class="product-info">
             <div>
                 <ul>
                     <li v-for="pop in popis3">
                         <p>Название: {{ pop.name }}</p>
                         <p>Заметка: {{ pop.review }}</p>
+                        <p>Заметка: {{ pop.review1 }}</p>
+                        <p>Заметка: {{ pop.review2 }}</p>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-
 </div >
 </body>
 </html>

@@ -10,18 +10,24 @@ let app = new Vue({
        popis3: [],
         name:null,
         review: null,
+        review1: null,
+        review2: null,
 
     },
     methods: {
         onSubmit() {
-            if (this.name && this.review) {
+            if (this.name && this.review && this.review1 && this.review2) {
                 let productReview = {
                     name: this.name,
                     review: this.review,
+                    review1: this.review1,
+                    review2: this.review2,
                 }
                 eventBus.$emit('review-submitted', productReview)
                 this.name = null
                 this.review = null
+                this.review1 = null
+                this.review2 = null
             }
         },
     },
